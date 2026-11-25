@@ -1,0 +1,42 @@
+{
+  "name": "ExploreNear",
+  "description": "A programmatic UIKit nearby discovery app using CoreLocation and MapKit MKLocalSearch with map, list and directions.",
+  "platform": "iOS 17.0+",
+  "programmingLanguage": "Swift 6.2",
+  "frameworks": ["UIKit", "MapKit", "CoreLocation", "Foundation"],
+  "features": [
+    "Category-based nearby search",
+    "Map annotations",
+    "Nearby places list with distance",
+    "Place detail and directions link",
+    "Location permission fallback",
+    "Light and dark appearance"
+  ],
+  "architecture": "MVVM with protocol-based location and place-search services; pure distance/fallback helpers; programmatic UIKit map and list screens.",
+  "dataSources": [
+    {
+      "name": "Apple Maps MKLocalSearch",
+      "url": "https://developer.apple.com/frameworks/mapkit/",
+      "apiKeyRequired": false
+    }
+  ],
+  "developmentStatus": "complete",
+  "buildVerification": {
+    "status": "verified",
+    "xcode": "26.0.1",
+    "swift": "6.2",
+    "sdk": "iOS Simulator 26.0",
+    "deploymentTarget": "iOS 17.0",
+    "build": "passed",
+    "buildForTesting": "passed",
+    "unitTests": "authored; execution skipped at user request",
+    "uiTests": "authored; execution skipped at user request",
+    "simulatorLaunch": "verified with simulator location",
+    "physicalDeviceTests": "real GPS, permission prompts and live local search should be checked on a device"
+  },
+  "screenshotPaths": [
+    "portfolio/screenshots/explore-light.png",
+    "portfolio/screenshots/explore-dark.png"
+  ],
+  "repositoryUrl": null
+}

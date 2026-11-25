@@ -1,0 +1,131 @@
+{
+  "name": "ExploreNear",
+  "options": {
+    "deploymentTarget": "17.0",
+    "createIntermediateGroups": true,
+    "bundleIdPrefix": "com.portfolio",
+    "groupSortPosition": "top"
+  },
+  "settings": {
+    "SWIFT_VERSION": "5.0",
+    "IPHONEOS_DEPLOYMENT_TARGET": "17.0",
+    "CLANG_ENABLE_MODULES": true,
+    "ALWAYS_SEARCH_USER_PATHS": false,
+    "ENABLE_USER_SCRIPT_SANDBOXING": true,
+    "DEVELOPMENT_TEAM": "",
+    "CODE_SIGN_STYLE": "Automatic",
+    "MARKETING_VERSION": "1.0",
+    "CURRENT_PROJECT_VERSION": "1",
+    "GENERATE_INFOPLIST_FILE": true
+  },
+  "targets": {
+    "ExploreNear": {
+      "type": "application",
+      "platform": "iOS",
+      "sources": [
+        "Sources/ExploreNear",
+        "Resources"
+      ],
+      "resources": [
+        "Resources/Assets.xcassets"
+      ],
+      "info": {
+        "path": "Sources/ExploreNear/Info.plist",
+        "properties": {
+          "CFBundleDisplayName": "ExploreNear",
+          "UILaunchScreen": {},
+          "UIApplicationSupportsIndirectInputEvents": true,
+          "ITSAppUsesNonExemptEncryption": false,
+          "UIApplicationSceneManifest": {
+            "UIApplicationSupportsMultipleScenes": false,
+            "UISceneConfigurations": {
+              "UIWindowSceneSessionRoleApplication": [
+                {
+                  "UISceneDelegateClassName": "$(PRODUCT_MODULE_NAME).SceneDelegate"
+                }
+              ]
+            }
+          },
+          "NSLocationWhenInUseUsageDescription": "ExploreNear uses your location to find nearby places."
+        }
+      },
+      "settings": {
+        "PRODUCT_BUNDLE_IDENTIFIER": "com.portfolio.explorenear",
+        "ASSETCATALOG_COMPILER_APPICON_NAME": "AppIcon",
+        "ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME": "AccentColor",
+        "SWIFT_EMIT_LOC_STRINGS": true,
+        "CODE_SIGN_STYLE": "Automatic",
+        "TARGETED_DEVICE_FAMILY": "1",
+        "SUPPORTS_MACCATALYST": false
+      }
+    },
+    "ExploreNearTests": {
+      "type": "bundle.unit-test",
+      "platform": "iOS",
+      "sources": [
+        "Tests/ExploreNearTests"
+      ],
+      "dependencies": [
+        {
+          "target": "ExploreNear"
+        }
+      ],
+      "settings": {
+        "PRODUCT_BUNDLE_IDENTIFIER": "com.portfolio.explorenear.tests",
+        "CODE_SIGN_STYLE": "Automatic"
+      }
+    },
+    "ExploreNearUITests": {
+      "type": "bundle.ui-testing",
+      "platform": "iOS",
+      "sources": [
+        "UITests/ExploreNearUITests"
+      ],
+      "dependencies": [
+        {
+          "target": "ExploreNear"
+        }
+      ],
+      "settings": {
+        "PRODUCT_BUNDLE_IDENTIFIER": "com.portfolio.explorenear.uitests",
+        "CODE_SIGN_STYLE": "Automatic"
+      }
+    }
+  },
+  "schemes": [
+    {
+      "name": "ExploreNear",
+      "buildTargets": [
+        {
+          "target": "ExploreNear",
+          "debug": true,
+          "profile": true,
+          "analyze": true,
+          "archive": true
+        }
+      ],
+      "testTargets": [
+        {
+          "target": "ExploreNearTests"
+        },
+        {
+          "target": "ExploreNearUITests"
+        }
+      ],
+      "launchAction": {
+        "target": "ExploreNear",
+        "debugger": "lldb"
+      },
+      "profileAction": {
+        "target": "ExploreNear"
+      },
+      "analyzeAction": {
+        "target": "ExploreNear"
+      },
+      "archiveAction": {
+        "target": "ExploreNear",
+        "revealArchiveInOrganizer": false
+      }
+    }
+  ]
+}
